@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Message Board</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <main>
+    <h1>Mini Message Board</h1>
+
+    <div class="container">
+      <% messages.forEach(item => { %>
+        <dl class="card">
+          <dt class="info-card-span author">
+            <%= item.user %>
+          </dt>
+          <dt class="info-card-span text">
+            <%= item.text %>
+          </dt>
+          <dt class="info-card-span added">
+            <%= item.added %>
+          </dt>
+          <div class="options-card info-card-span">
+            <button 
+            onclick="location.href='/detailMessages/<%= item.id%>'"
+            class="btn-detail"
+            type="button"
+            >
+            View
+            </button>
+          </div>
+        </dl>
+        <% }) %>
+
+    </div>
+     
+    <button class="btn-open" onclick="location.href='/new'">New</button>
+  </main>
+
+</body>
+
+</html>

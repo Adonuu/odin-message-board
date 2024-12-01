@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Details</title>
+  <link rel="stylesheet" href="/index.css" />
+</head>
+
+<body>
+  <h1>Detail </h1>
+  <div class="container">
+    <dl class="card">
+      <dt class="info-card-span author">
+        <p>Author:  <%= detail.user %> </p>
+      </dt>
+      <dt class="info-card-span text">
+        <%= detail.text %>
+      </dt>
+      <dt class="info-card-span authorId">
+        <p>ID -  <%= detail.id %></p>
+      </dt>
+      <dt class="info-card-span added">
+        <%= detail.added %>
+      </dt>
+      <dt class="options-card info-card-spa">
+        <button onclick="location.href='/'" type="button" class="btn-detail">
+          Back
+        </button>
+      </dt>
+
+    </dl>
+
+</body>
+
+</html>
